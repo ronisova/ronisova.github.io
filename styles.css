@@ -1,0 +1,36 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+}
+
+#canvasWrapper {
+  display: inline-block;
+  position: relative;
+  max-width: 100%;
+  max-height: 80vh;
+}
+
+canvas {
+  border: 1px solid #ccc;
+  cursor: crosshair;
+  max-width: 100%;
+  height: auto;
+}
+
+#coordsList {
+  margin-top: 20px;
+  background: #fff;
+  padding: 10px;
+  text-align: left;
+  max-width: 90%;
+  overflow-y: auto;
+  max-height: 200px;
+  border: 1px solid #ddd;
+}
+
+.hidden {
+  display: none;
+}

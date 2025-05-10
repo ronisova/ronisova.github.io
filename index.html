@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Land Mapper</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.11.0/math.min.js"></script>
+</head>
+
+<body>
+  <h1>Land Mapper</h1>
+  <h4>Upload Image</h4>
+
+  <input type="file" id="imageUpload" accept="image/*" />
+  <br><br>
+
+  <label for="csvUpload"><strong>Upload Coordinates CSV:</strong></label><br>
+  <input type="file" id="csvUpload" accept=".csv" />
+  <button id="clearPoints">Clear Points</button>
+  <button id="loadCSVBtn">Load Points from File</button>
+  <br><br>
+
+  <div id="canvasWrapper">
+    <canvas id="mapCanvas"></canvas>
+  </div>
+
+  <div id="coordsForm" class="hidden">
+    <h3 id="editPointText" class="hidden">Select a new point on the map</h3>
+    <h4 id="currentPointName">New Point</h4>
+    <p>Image point: <span id="imgCoordsPreview"></span></p>
+    <input type="number" id="realX" placeholder="Real-world X" step="any" disabled>
+    <input type="number" id="realY" placeholder="Real-world Y" step="any" disabled>
+    <button id="saveBtn">Save</button>
+    <button id="clearForm">Clear</button>
+  </div>
+
+  <div id="coordsList" class="hidden"></div>
+
+  <div style="margin-top: 10px;">
+    <button id="exportCSVBtn">Export Selected Points to CSV</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
